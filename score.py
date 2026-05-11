@@ -8,10 +8,24 @@ Original file is located at
 """
 
 grades = input().split()
+
+max_grade = int(grades[0])
+min_grade = int(grades[0])
 total = 0
 
 for grade in grades:
-  total = total + int(grade)
+    grade_int = int(grade)
+
+    if grade_int > max_grade:
+        max_grade = grade_int
+
+    if grade_int < min_grade:
+        min_grade = grade_int
+
+    total += grade_int
 
 average = total / len(grades)
+
+print(max_grade)
+print(min_grade)
 print(average)
