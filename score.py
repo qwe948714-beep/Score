@@ -8,10 +8,16 @@ Original file is located at
 """
 
 grades = input().split()
-fai_number = 0
+
+max_grade = grades[0]
+min_grade = grades[0]
 
 for grade in grades:
-  if int(grade) < 60:
-    fai_number += 1
+    if int(grade) > int(max_grade):
+        max_grade = grade
 
-print(fai_number)
+    if int(grade) < int(min_grade):
+        min_grade = grade
+
+print(max_grade)
+print(min_grade)
